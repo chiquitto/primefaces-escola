@@ -31,7 +31,10 @@ public class ProfessorCadastrar {
     public void salvar() {
         Conexao.setUrl("jdbc:sqlite:/Users/chiquitto/work/aula/java-caso-uso-escola/data/escola.sqlite.db");
         ProfessorDao dao = new ProfessorDao();
+        
         dao.cadastrar(this.professor);
+        
+        // return "professores";
     }
     
     
