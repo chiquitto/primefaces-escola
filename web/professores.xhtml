@@ -9,26 +9,32 @@
         <title>Professores</title>
     </h:head>
     <h:body>
-        <p:dataTable var="professor" value="#{professores.professores}">
-            <p:column headerText="Nome" >
-                <h:outputText value="#{professor.nome}" />
-            </p:column>
-            <p:column headerText="Email" >
-                <h:outputText value="#{professor.email}" />
-            </p:column>
-            <p:column headerText="Nascimento" >
-                <h:outputText value="#{professor.nascimento}">
-                    <!--<f:convertDateTime pattern="dd/MM/yyyy" />-->
-                    <f:convertDateTime />
-                </h:outputText>
-            </p:column>
-            <p:column headerText="Salário" >
-                <h:outputText value="#{professor.salario}">
-                    <!--<f:convertNumber type="currency" currencySymbol="R$" />-->
-                    <f:convertNumber type="currency" />
-                </h:outputText>
-            </p:column>
-        </p:dataTable>
+        <h:form id="frm">
+            <p:dataTable var="professor" value="#{professores.professores}">
+                <p:column headerText="Nome" >
+                    <h:outputText value="#{professor.nome}" />
+                </p:column>
+                <p:column headerText="Email" >
+                    <h:outputText value="#{professor.email}" />
+                </p:column>
+                <p:column headerText="Nascimento" >
+                    <h:outputText value="#{professor.nascimento}">
+                        <!--<f:convertDateTime pattern="dd/MM/yyyy" />-->
+                        <f:convertDateTime />
+                    </h:outputText>
+                </p:column>
+                <p:column headerText="Salário" >
+                    <h:outputText value="#{professor.salario}">
+                        <!--<f:convertNumber type="currency" currencySymbol="R$" />-->
+                        <f:convertNumber type="currency" />
+                    </h:outputText>
+                </p:column>
+                <p:column>
+                    <p:commandLink value="Editar" update="frm"
+                                     action="#{professores.editar(professor)}" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
     </h:body>
 </html>
 

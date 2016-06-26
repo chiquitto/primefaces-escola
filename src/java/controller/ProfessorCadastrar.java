@@ -1,4 +1,4 @@
-package principal;
+package controller;
 
 import br.com.chiquitto.escola.Conexao;
 import br.com.chiquitto.escola.dao.ProfessorDao;
@@ -29,7 +29,6 @@ public class ProfessorCadastrar {
     }
     
     public String salvar() {
-        Conexao.setUrl("jdbc:sqlite:/Users/chiquitto/work/aula/java-caso-uso-escola/data/escola.sqlite.db");
         ProfessorDao dao = new ProfessorDao();
         
         dao.cadastrar(this.professor);
