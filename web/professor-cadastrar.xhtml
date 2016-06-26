@@ -16,7 +16,7 @@
                 <h:panelGrid columns="3" styleClass="grid-cad">
                     <p:outputLabel value="Nome" />
                     <p:inputText id="nome" required="true"
-                                 value="#{professorCadastrar.professor.nome}"
+                                 value="#{professormb.professor.nome}"
                                  requiredMessage="Informe o nome completo"
                                  validatorMessage="oi" />
                     <p:message for="nome" />
@@ -24,20 +24,20 @@
                     <p:outputLabel value="Telefone" />
                     <p:inputMask id="fone" required="true"
                                  mask="(99) 9999-9999"
-                                 value="#{professorCadastrar.professor.fone}"
+                                 value="#{professormb.professor.fone}"
                                  requiredMessage="Informe o número de telefone com DDD" />
                     <p:message for="fone" />
 
                     <p:outputLabel value="E-mail" />
                     <p:inputText id="email" required="true"
-                                 value="#{professorCadastrar.professor.email}"
+                                 value="#{professormb.professor.email}"
                                  requiredMessage="Informe o endereço de email" />
                     <p:message for="email" />
 
                     <p:outputLabel value="Data de nascimento" />
                     <p:calendar id="nascimento" pattern="dd/MM/yyyy" mask="true"
                                 showOn="button"
-                                value="#{professorCadastrar.professor.nascimento}"
+                                value="#{professormb.professor.nascimento}"
                                 required="true"
                                 requiredMessage="Informe a data de nascimento" />
                     <p:message for="nascimento" />
@@ -45,14 +45,14 @@
                     <p:outputLabel value="Salário" />
                     <p:inputNumber id="salario" symbol="R$ " symbolPosition="p"
                                    decimalSeparator="," thousandSeparator="."
-                                   value="#{professorCadastrar.professor.salario}"
+                                   value="#{professormb.professor.salario}"
                                    requiredMessage="Informe o salário"
                                    required="true">
                     </p:inputNumber>
                     <p:message for="salario" />
 
                     <p:commandButton value="Salvar" update="frm"
-                                     action="#{professorCadastrar.salvar}" />
+                                     action="#{professormb.criar}" />
                 </h:panelGrid>
             </h:form>
         </p:panel>
